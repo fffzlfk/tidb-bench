@@ -7,7 +7,7 @@ use warnings;
 
 my $output = "query-time.log";
 
-for (my $i = 20; $i <= 22; $i++){
+for (my $i = 1; $i <= 22; $i++){
 
 	# skip query 18 because it takes long time
 	# next if $i == 18;

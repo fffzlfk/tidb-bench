@@ -14,7 +14,7 @@ if( !defined($transaction) ){
 }
 
 my $starttime = [gettimeofday()];
-system("mysql -u root -P 4000 -h 172.233.1.29 --database=tpch <$transaction >/dev/null");
+system("mysql -u root -P 4000 -h 127.0.0.1 --database=tpch <$transaction >/dev/null");
 
 my ($user, $sys, $child_user, $child_sys) = times;
 print "=== runtime ===\n";

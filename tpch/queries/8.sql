@@ -4,7 +4,7 @@
 select
 	o_year,
 	sum(case
-		when nation = 'INDIA' then volume
+		when nation = 'BRAZIL' then volume
 		else 0
 	end) / sum(volume) as mkt_share
 from
@@ -32,7 +32,7 @@ from
 			and r_name = 'ASIA'
 			and s_nationkey = n2.n_nationkey
 			and o_orderdate between '1995-01-01' and '1996-12-31'
-			and p_type = 'SMALL PLATED COPPER'
+			and p_type = 'ECONOMY ANODIZED STEEL'
 	) as all_nations
 group by
 	o_year
